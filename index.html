@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <meta charset="utf-8" />
+    <meta name="description" content="Application form for office job" />
+    <meta name="keywords" content="job, office, application, form" />
+    <meta name="author" content="Marcin Sudoł" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Office job application form</title>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <header>
+        <h1 id="title">Job form</h1>
+
+        <p id="description">Fill in to apply</p>
+      </header>
+
+      <form id="form-container">
+        <!-- NAME -->
+        <div class="question-container">
+          <label id="name-label" class="question-label" for="name">Name:</label>
+          <input
+            id="name"
+            class="row-input"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+
+        <!-- EMAIL -->
+        <div class="question-container">
+          <label id="email-label" class="question-label" for="email"
+            >Email:</label
+          >
+          <input
+            id="email"
+            class="row-input"
+            type="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <!-- EDUCATION DROPDOWN -->
+        <div class="question-container">
+          <label class="question-label" for="dropdown"
+            >Level of education:</label
+          >
+          <select id="dropdown" class="row-input" required>
+            <option disabled selected>Select an option</option>
+            <option value="primary">Primary education</option>
+            <option value="secondary">Secondary education</option>
+            <option value="higher">Higher education</option>
+            <option value="na">No answer</option>
+          </select>
+        </div>
+
+        <!-- YEARS OF EXPERIENCE -->
+        <div class="question-container">
+          <label id="number-label" class="question-label" for="number"
+            >Years of experience (optional):</label
+          >
+          <input
+            id="number"
+            class="row-input"
+            type="number"
+            placeholder="Enter number of years of experience"
+            min="0"
+            max="50"
+          />
+        </div>
+
+        <!-- PROGRAMS -->
+        <div class="question-container">
+          <p class="question-label">Known programs:</p>
+
+          <dic class="option-group">
+            <label class="option-container" for="box-windows">
+              <input
+                type="checkbox"
+                id="box-windows"
+                name="checkbox"
+                value="windows"
+              />
+              <span class="option-label">Windows</span>
+            </label>
+
+            <label class="option-container" for="box-word">
+              <input
+                type="checkbox"
+                id="box-word"
+                name="checkbox"
+                value="word"
+              />
+              <span class="option-label">Word</span>
+            </label>
+
+            <label class="option-container" for="box-excel">
+              <input
+                type="checkbox"
+                id="box-excel"
+                name="checkbox"
+                value="excel"
+              />
+              <span class="option-label">Excel</span>
+            </label>
+
+            <label class="option-container" for="box-powerpoint">
+              <input
+                type="checkbox"
+                id="box-powerpoint"
+                name="checkbox"
+                value="powerpoint"
+              />
+              <span class="option-label">Power Point</span>
+            </label>
+
+            <label class="option-container" for="box-outlook">
+              <input
+                type="checkbox"
+                id="box-outlook"
+                name="checkbox"
+                value="outlook"
+              />
+              <span class="option-label">Outlook</span>
+            </label>
+          </dic>
+        </div>
+
+        <!-- SALARY -->
+        <div class="question-container">
+          <p class="question-label">Expected salary:</p>
+
+          <dic class="option-group">
+            <label class="option-container" for="below-3k">
+              <input type="radio" id="below-3k" name="radio" value="below-3k" />
+              <span class="option-label">Below $3K</span>
+            </label>
+
+            <label class="option-container" for="3k-4k">
+              <input type="radio" id="3k-4k" name="radio" value="3k-4k" />
+              <span class="option-label">$3K - $4K</span>
+            </label>
+
+            <label class="option-container" for="4k-5k">
+              <input type="radio" id="4k-5k" name="radio" value="4k-5k" />
+              <span class="option-label">$4K - $5K</span>
+            </label>
+
+            <label class="option-container" for="above-5k">
+              <input type="radio" id="above-5k" name="radio" value="above-5k" />
+              <span class="option-label">Above $5K</span>
+            </label>
+
+            <label class="option-container" for="dont-know">
+              <input
+                type="radio"
+                id="dont-know"
+                name="radio"
+                value="dont know"
+              />
+              <span class="option-label">Don't know</span>
+            </label>
+          </dic>
+        </div>
+
+        <!-- COMMENTS -->
+        <div class="question-container">
+          <label class="question-label" for="comments"
+            >Additional informations:</label
+          >
+          <textarea
+            id="comments"
+            class="big-size-input"
+            placeholder="Enter other informations here..."
+          ></textarea>
+        </div>
+        <!-- SUBMIT -->
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
